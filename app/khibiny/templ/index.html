@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Туры на кольский полуостров</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.ico' %}" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+
+
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="{% url 'index' %}">OXANA_KHIBINY</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Главная</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">Обо мне</a></li>
+                            <li class="nav-item"><a class="nav-link" href="{% url 'travel' %}">Путешествия</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://vk.com/oxanakhibiny">VK</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://instagram.com/oxana_khibiny?igshid=MzRlODBiNWFlZA==">Instagram</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://t.me/ibonish">Telegram</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://api.whatsapp.com/send?phone=79021367185&text=Путешествия%20по%20Кольскому">WhatsUp</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Navigation-->
+
+
+            <!-- Header-->
+            <header class="bg-dark py-5">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+                                <h1 class="display-5 fw-bolder text-white mb-2">Открой для себя удивительные места во время путешествия на Кольском полуострове!</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">Север - место притяжения туристов, cюда можно приезжать в любое время года. Зима - отличное время для походов на снегоступах или погони за северным сиянием, а летом можно насладиться прекрасным воздухом в горах или на море. </p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-primary btn-lg px-4 me-sm-3" href="https://t.me/ibonish">Записаться</a>
+                                    <a class="btn btn-outline-light btn-lg px-4" href="{% url 'travel' %}">Узнать большe</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="{% static 'img/overlay.png' %}" alt="..." /></div>
+                    </div>
+                </div>
+            </header>
+            <!-- Header-->
+
+
+            <!-- Features section-->
+            <!-- Testimonial section-->
+            <div class="py-5 bg-light">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic">"Меня зовут Оксана, и я - гид, влюбленный в этот уникальный уголок России. Я организую экскурсии и туры на Кольском полуострове, а также походы в Хибины. Моя задача – организовать ваше путешествие до самых мелочей, чтобы вам оставалось только наслаждаться нашей невероятной природой. Духи Севера наделили меня бескрайней любовью  к этому краю, иначе как объяснить мое стремление влюбить в это место остальных!"</div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <img class="rounded-circle me-3" src="{% static 'img/11.png' %}" alt="..." />
+                                    <div class="fw-bold">
+                                        Оксана Скрябина
+                                        <span class="fw-bold text-primary mx-1">/</span>
+                                        Квалифицированный гид по Мурманской области
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog preview section-->
+            <section class="py-5">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="text-center">
+                                <h2 class="fw-bolder">Наши туры</h2>
+                                <p class="lead fw-normal text-muted mb-5">Отправляйся с нами навсречу новым приключениям и эмоциям!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="{% static 'img/terib.png' %}" alt="..." />
+                                <div class="card-body p-4">
+                                    <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div> -->
+                                    <a class="text-decoration-none link-dark stretched-link" href="{% url 'teriberka' %}"><h5 class="card-title mb-3">Териберка</h5></a>
+                                    <p class="card-text mb-0">Однодневное путешествие на край земли. Одно из самых популярных направлений на севере.</p>
+                                    <p> </p>
+                                     <button type="button" class="btn btn-outline-dark" href="{% url 'teriberka' %}">Подробнее</button>  
+                                                                    
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="{% static 'img/heart.png' %}" alt="..." />
+                                <div class="card-body p-4">
+                                    <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div> -->
+                                    <a class="text-decoration-none link-dark stretched-link" href="{% url 'khibiny_heart' %}"><h5 class="card-title mb-3">Сердце хибин</h5></a>
+                                    <p class="card-text mb-0">Поездка по дороге, окруженной Хибинами до базы спасателей. Посещение водопада "Красивый".</p>
+                                    <p> </p>
+                                    <button type="button" class="btn btn-outline-dark" href="{% url 'khibiny_heart' %}">Подробнее</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="{% static 'img/shine.png' %}" alt="..." />
+                                <div class="card-body p-4">
+                                    <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div> -->
+                                    <a class="text-decoration-none link-dark stretched-link" href="{% url 'polar_shine' %}"><h5 class="card-title mb-3">Северное сияние</h5></a>
+                                    <p class="card-text mb-0">Зимняя охота за одним из самых завораживающих природных явлений, в сопровождении саамских легенд.</p>
+                                    <p> </p>
+                                    <button type="button" class="btn btn-outline-dark" href="{% url 'polar_shine' %}">Подробнее</button>
+                                </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <section class="py-5">
+                        <div class="container px-5 my-5">
+                            <div class="row gx-5 justify-content-center">
+                                <div class="col-lg-8 col-xl-6">
+                                    <!-- <div class="text-center"> -->
+                                        <!-- <h2 class="fw-bolder">Наши туры</h2> -->
+                                        <!-- <p class="lead fw-normal text-muted mb-5">Отправляйся с нами навсречу новым приключениям и эмоциям.</p> -->
+                                    <!-- </div> -->
+                                </div>
+                            </div>
+                            <div class="row gx-5">
+                                <div class="col-lg-4 mb-5">
+                                    <div class="card h-100 shadow border-0">
+                                        <img class="card-img-top" src="{% static 'img/snegstup.png' %}" alt="..." />
+                                        <div class="card-body p-4">
+                                            <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div> -->
+                                            <a class="text-decoration-none link-dark stretched-link" href="{% url 'snow_walk' %}"><h5 class="card-title mb-3">Походы на снегоступах</h5></a>
+                                            <p class="card-text mb-0">Зимние походы в горы на снегоступах. Индивидуальный маршрут.</p>
+                                            <p> </p>
+                                            <button type="button" class="btn btn-outline-dark">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-5">
+                                    <div class="card h-100 shadow border-0">
+                                        <img class="card-img-top" src="{% static 'img/walk.png' %}" alt="..." />
+                                        <div class="card-body p-4">
+                                            <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div> -->
+                                            <a class="text-decoration-none link-dark stretched-link" href="{% url 'walk' %}"><h5 class="card-title mb-3">Пешие походы в Хибины</h5></a>
+                                            <p class="card-text mb-0">Походы в горы любой сложности. Индивидуальный маршрут.</p>
+                                            <p> </p>
+                                            <button type="button" class="btn btn-outline-dark">Подробнее</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mb-5">
+                                    <div class="card h-100 shadow border-0">
+                                        <img class="card-img-top" src="{% static 'img/town.png' %}" alt="..." />
+                                        <div class="card-body p-4">
+                                            <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div> -->
+                                            <a class="text-decoration-none link-dark stretched-link" href="{% url 'art_park' %}"><h5 class="card-title mb-3">Обзорная экскурсия по Кировску</h5></a>
+                                            <p class="card-text mb-0">Посещение "Таинственного леса" и "Cнежной деревни".</p>
+                                            <p> </p>
+                                            <button type="button" class="btn btn-outline-dark">Подробнее</button>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+<!-- 3 строчка  -->
+                            <section class="py-5">
+                                <div class="container px-5 my-5">
+                                    <div class="row gx-5 justify-content-center">
+                                        <div class="col-lg-8 col-xl-6">
+                                        </div>
+                                    </div>
+                                    <div class="row gx-5">
+                                        <div class="col-lg-4 mb-5">
+                                            <div class="card h-100 shadow border-0">
+                                                <img class="card-img-top" src="{% static 'img/hod.png' %}" alt="..." />
+                                                <div class="card-body p-4">
+                                                    <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div> -->
+                                                    <a class="text-decoration-none link-dark stretched-link" href="{% url 'snow_travel' %}"><h5 class="card-title mb-3">Поездки на снегоходах</h5></a>
+                                                    <p class="card-text mb-0">Зимние поездки в Хибины.</p>
+                                                    <p> </p>
+                                                    <button type="button" class="btn btn-outline-dark" href="{% url 'snow_travel' %}">Подробнее</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-5">
+                                            <div class="card h-100 shadow border-0">
+                                                <img class="card-img-top" src="{% static 'img/water.png' %}" alt="..." />
+                                                <div class="card-body p-4">
+                                                    <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">Media</div> -->
+                                                    <a class="text-decoration-none link-dark stretched-link" href="{% url 'seidozero' %}"><h5 class="card-title mb-3">Сейдозеро</h5></a>
+                                                    <p class="card-text mb-0">Самое таинсвенное место на Кольском.</p>
+                                                    <p></p>
+                                                    <button type="button" class="btn btn-outline-dark">Подробнее</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 mb-5">
+                                            <div class="card h-100 shadow border-0">
+                                                <img class="card-img-top" src="{% static 'img/white.png' %}" alt="..." />
+                                                <div class="card-body p-4">
+                                                    <!-- <div class="badge bg-primary bg-gradient rounded-pill mb-2">News</div> -->
+                                                    <a class="text-decoration-none link-dark stretched-link" href="{% url 'white_sea' %}"><h5 class="card-title mb-3">Белое море</h5></a>
+                                                    <p class="card-text mb-0">Путешествие по Терскому берегу.</p>
+                                                    <p></p>
+                                                    <button type="button" class="btn btn-outline-dark" href="{% url 'white_sea' %}">Подробнее</button>
+                                                </div>
+                                                <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
+                                                    <div class="d-flex align-items-end justify-content-between">
+                                                        <div class="d-flex align-items-center">
+                                                            <!-- <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+                                                            <div class="small">
+                                                                <div class="fw-bold">Evelyn Martinez</div>
+                                                                <div class="text-muted">April 2, 2023 &middot; 10 min read</div> -->
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+
+                    <!-- Call to action-->
+                    <!-- <aside class="bg-primary bg-gradient rounded-3 p-4 p-sm-5 mt-5">
+                        <div class="d-flex align-items-center justify-content-between flex-column flex-xl-row text-center text-xl-start">
+                            <div class="mb-4 mb-xl-0">
+                                <div class="fs-3 fw-bold text-white">New products, delivered to you.</div>
+                                <div class="text-white-50">Sign up for our newsletter for the latest updates.</div>
+                            </div>
+                            <div class="ms-xl-4">
+                                <div class="input-group mb-2">
+                                    <input class="form-control" type="text" placeholder="Email address..." aria-label="Email address..." aria-describedby="button-newsletter" />
+                                    <button class="btn btn-outline-light" id="button-newsletter" type="button">Sign up</button>
+                                </div>
+                                <div class="small text-white-50">We care about privacy, and will never share your data.</div>
+                            </div>
+                        </div>
+                    </aside> -->
+                </div>
+            </section>
+        </main>
+
+
+        <section class="py-5" id="features">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Наши преимущества</h2></div>
+                    <div class="col-lg-8">
+                        <div class="row gx-5 row-cols-1 row-cols-md-2">
+                            <div class="col mb-5 h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-file-image-fill"></i></div>
+                                <h2 class="h5">Индивидуальный маршрут!</h2>
+                                <p class="mb-0">Я подберу маршрут, с учетом ваших возможностей. Вы сможете увидеть всю красоту природы, начиная от простой прогулки и заканчивая настоящим походом в горы.</p>
+                            </div>
+                            <div class="col mb-5 h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-person-fill"></i></div>
+                                <h2 class="h5">Ваш персональный гид</h2>
+                                <p class="mb-0">Меня зовут Оксана, и я квалифицированный гид по Мурманской области. Проведу тур для вашей компании, а если вы один, то найду единомышленников.</p>
+                            </div>
+                            <div class="col mb-5 mb-md-0 h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-snow2"></i></div>
+                                <h2 class="h5">Развитие экологичного туризма</h2>
+                                <p class="mb-0">Наш поход или поездка не навредит окружающей среде, ведь самое главное правило - это забота о природе.</p>
+                            </div>
+                            <!-- <div class="col h-100">
+                                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                <h2 class="h5">Featured title</h2>
+                                <p class="mb-0">Paragraph of text beneath the heading to explain the heading. Here is just a bit more text.</p>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; OXANA_KHIBINY 2023</div></div>
+                    <div class="col-auto">
+                        <a class="link-light small" href="#!">+7 (902) 136 71-85</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="https://t.me/ibonish">TG</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="https://vk.com/oxanakhibiny">VK</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="https://instagram.com/oxana_khibiny?igshid=MzRlODBiNWFlZA==">INST</a>
+                        <span class="text-white mx-1">&middot;</span>
+                        <a class="link-light small" href="https://api.whatsapp.com/send?phone=79021367185&text=Путешествия%20по%20Кольскому">WhatsUp</a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'js/scripts.js' %}"></script>
+    </body>
+</html>
+
