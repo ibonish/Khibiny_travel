@@ -1,10 +1,12 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
+from .models import TravelCard
 
 
 def index(request):
     template = 'index.html'
-    return render(request, template) 
+    tours = TravelCard.objects.all()[:6]
+    return render(request, template, {'tours': tours})
 
 
 def about(request):
@@ -12,55 +14,28 @@ def about(request):
     return render(request, template)
 
 
-def travel(request):
-    template = 'travel.html'
-    return render(request, template)
+def summer_travel(request):
+    template = 'summer_travel.html'
+    summer_tours = TravelCard.objects.filter(season="summer")
+    return render(request, template, {'tours': summer_tours})
 
 
-def polar_shine(request):
-    template = 'polar_shine.html'
-    return render(request, template)
+def winter_travel(request):
+    template = 'winter_travel.html'
+    winter_tours = TravelCard.objects.filter(season="winter")
+    return render(request, template, {'tours': winter_tours})
 
 
-def khibiny_heart(request):
-    template = 'khibiny_heart.html'
-    return render(request, template)
+def test(request):
+    template = 'test.html'
+    tours = TravelCard.objects.all()
+    return render(request, template, {'tours': tours})
 
 
-def snow_travel(request):
-    template = 'snow_travel.html'
-    return render(request, template)
-
-
-def teriberka(request):
-    template = 'teriberka.html'
-    return render(request, template)
-
-
-def white_sea(request):
-    template = 'white_sea.html'
-    return render(request, template)
-
-
-def snow_walk(request):
-    template = 'snow_walk.html'
-    return render(request, template)
-
-
-def walk(request):
-    template = 'walk.html'
-    return render(request, template)
-
-
-def seidozero(request):
-    template = 'seidozero.html'
-    return render(request, template)
-
-
-def art_park(request):
-    template = 'art_park.html'
-    return render(request, template)
-
-def etno(request):
-    template = 'etno.html'
-    return render(request, template)
+def travel_detail(request, travel_id):
+    tour = get_object_or_404(TravelCard, id=travel_id)
+    template = 'travel_detail.html'
+    context = {
+        'tour': tour,
+    }
+    return render(request, template, context)

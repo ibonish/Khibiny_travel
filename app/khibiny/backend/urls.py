@@ -1,20 +1,21 @@
 from django.urls import path
 from . import views
+from django.conf import settings
+from django.conf.urls.static import static
+
 
 urlpatterns = [
-    # Главная страница
     path('', views.index, name='index'),
-    path('about', views.about, name='about'),
-    path('travel', views.travel, name='travel'),
-    path('teriberka', views.teriberka, name='teriberka'),
-    path('white_sea', views.white_sea, name='white_sea'),
-    path('khibiny_heart', views.khibiny_heart, name='khibiny_heart'),
-    path('polar_shine', views.polar_shine, name='polar_shine'),
-    path('snow_travel', views.snow_travel, name='snow_travel'),
-    path('white_sea', views.white_sea, name='white_sea'),
-    path('snow_walk', views.snow_walk, name='snow_walk'),
-    path('walk', views.walk, name='walk'),
-    path('seidozero', views.seidozero, name='seidozero'),
-    path('art_park', views.art_park, name='art_park'),
-    path('etno', views.etno, name='etno'),
-] 
+    path('about/', views.about, name='about'),
+    path('summer_travel/', views.summer_travel, name='summer_travel'),
+    path('winter_travel/', views.winter_travel, name='winter_travel'),
+    path('test/', views.test, name='test'),
+    # path('travel/', views.winter_travel, name='winter_travel'),
+    path('travel/<int:travel_id>/', views.travel_detail, name='travel_detail')
+]
+
+
+if settings.DEBUG:
+    urlpatterns += static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT
+    )

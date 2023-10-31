@@ -20,21 +20,7 @@
 
             <!-- Navigation-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="{% url 'index' %}">OXANA_KHIBINY</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                            <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Главная</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">Обо мне</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{% url 'travel' %}">Путешествия</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://vk.com/oxanakhibiny">VK</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://t.me/ibonish">Instagram</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://t.me/ibonish">Telegram</a></li>
-                            <li class="nav-item"><a class="nav-link" href="https://t.me/ibonish">WhatsUp</a></li>
-                        </ul>
-                    </div>
-                </div>
+                {% include 'includes/nav.html' %}
             </nav>
 
             <!-- Header-->
@@ -55,7 +41,7 @@
             <section class="py-5 bg-light" id="scroll-target">
                 <div class="container px-5 my-5">
                     <div class="row gx-5 align-items-center">
-                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/me1.png' %}" alt="..." /></div>
+                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/me.png' %}" alt="..." /></div>
                         <div class="col-lg-6">
                             <h2 class="fw-bolder">Обо мне</h2>
                             <p class="lead fw-normal text-muted mb-0">Я работаю гидом уже несколько лет, окончила “Школу гидов” от Кольского научного центра Российской академии наук (аккредитованный гид Мурманской области № 11580). Мне нравится помогать гостям открывать для себя красоту Кольского полуострова. Я покажу лучшие места на севере, самые красивые виды на горы и море, а также расскажу интересные истории и легенды, связанные с этими местами. </p>
@@ -67,7 +53,7 @@
             <section class="py-5">
                 <div class="container px-5 my-5">
                     <div class="row gx-5 align-items-center">
-                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/taski.jpg' %}" alt="..." /></div>
+                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="{% static 'img/me2.png' %}" alt="..." /></div>
                         <div class="col-lg-6">
                             <h2 class="fw-bolder">Путушествия</h2>
                             <p class="lead fw-normal text-muted mb-0">Я люблю путешествовать и исследовать новые места, и всегда рада поделиться своими знаниями и советами с туристами. Если вы хотите узнать больше о Кольском полуострове и провести незабываемое время в компании опытного гида, обращайтесь ко мне! Я готова показать вам все самое интересное и уникальное, что есть на Севере.</p>
@@ -117,23 +103,7 @@
         </main> -->
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
-            <div class="container px-5">
-                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
-                    <div class="col-auto"><div class="small m-0 text-white">Copyright &copy; OXANA_KHIBINY 2023</div></div>
-                    <div class="col-auto">
-                        <a class="link-light small" href="#!">+7 (902) 136 71-85</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="https://t.me/ibonish">TG</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="https://vk.com/oxanakhibiny">VK</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="https://instagram.com/oxana_khibiny?igshid=MzRlODBiNWFlZA==">INST</a>
-                        <span class="text-white mx-1">&middot;</span>
-                        <a class="link-light small" href="https://api.whatsapp.com/send?phone=79021367185&text=Путешествия%20по%20Кольскому">WhatsUp</a>
-
-                    </div>
-                </div>
-            </div>
+            {% include 'includes/footer.html' %}
         </footer>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
