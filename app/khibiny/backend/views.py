@@ -26,12 +26,6 @@ def winter_travel(request):
     return render(request, template, {'tours': winter_tours})
 
 
-def test(request):
-    template = 'test.html'
-    tours = TravelCard.objects.all()
-    return render(request, template, {'tours': tours})
-
-
 def travel_detail(request, travel_id):
     tour = get_object_or_404(TravelCard, id=travel_id)
     template = 'travel_detail.html'
