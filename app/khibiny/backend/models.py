@@ -27,7 +27,7 @@ class TravelCard(models.Model):
         choices=SEASON_CHOICES
     )
     description = models.TextField(
-        max_length=500
+        max_length=5000
     )
     image = models.ForeignKey(
         Image,
