@@ -37,7 +37,7 @@
                     <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="{{ tour.image.image.url }}" alt="..." /></div>
                     <div class="col-lg-6">
                         <h2 class="fw-bolder">{{ tour.name }}</h2>
-                        <p class="lead fw-normal text-muted mb-0">{{ tour.description }}
+                        <p class="lead fw-normal text-muted mb-0">{{ tour.description|linebreaksbr }}
                         </p>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
 
         <section class="py-5 bg-light">
             <div class="container px-5 my-5">
-                <h1 class="display-4 fw-bolder mb-4">Исследуй Кольский вместе с нами!</h1>
+                <h2 class="fw-bolder">Исследуй Кольский полуостров вместе с нами!</h2>
                 <a class="btn btn-lg btn-primary" href="https://t.me/ibonish">Записаться</a>
             </div>
         </section>
