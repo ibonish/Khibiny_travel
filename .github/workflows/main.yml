@@ -39,8 +39,8 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USER }}
           password: ${{ secrets.SSH_PASSPHRASE }}  
-          source: "app/docker-compose.yaml"
-          target: "Khibiny_travel/app"
+          source: "app/khibiny/docker-compose.yaml"
+          target: "Khibiny_travel/app/khibiny"
       - name: Executing remote ssh commands to deploy
         uses: appleboy/ssh-action@master
         with:
@@ -48,7 +48,7 @@ jobs:
           username: ${{ secrets.USER }}
           password: ${{ secrets.SSH_PASSPHRASE }}
           script: |
-            cd Khibiny_travel/app
+            cd Khibiny_travel/app/khibiny
             touch .env
             echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo DEBUG=${{ secrets.DEBUG }} >> .env
@@ -58,7 +58,7 @@ jobs:
             echo POSTGRES_HOST=${{ secrets.POSTGRES_HOST }} >> .env
             echo POSTGRES_PORT=${{ secrets.POSTGRES_PORT }} >> .env
 
-            cd ~/Khibiny_travel/app
+            cd ~/Khibiny_travel/app/khibiny
             sudo docker compose pull
             sudo docker compose down
             sudo docker compose up -d
